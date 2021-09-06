@@ -1,0 +1,13 @@
+# Changelog
+The date is follow when it is published to github and not the date the file created
+
+## [0.1.1] - 06-SEP-2021
+### Added
+-Support for more characters such as /,?,\a,\b,\e,\f,newline,\r,\t,\v,'
+
+### Fixed
+-Decrypting content with wrong phase won't cause program to hang
+
+## [0.1.0] - 15-AUG-2021
+### Added
+-Initial release
