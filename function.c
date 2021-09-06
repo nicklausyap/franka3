@@ -1,8 +1,9 @@
 // Date created: 14-AUG-2021 SATURDAY
 // This source file is part of the franka3 open source project
 // Copyright (c) 2021 nicklaus yap ken yik
-// version: 0.1.0
+// version: 0.1.1
 
+#include <stdlib.h> // for abs()
 #include "function.h"
 
 void add(void)
@@ -40,13 +41,18 @@ void add(void)
 
 void decipher(int *val, int len)
 {
-	// Your phase must be same as your initial phase you use to encrypt your content
-	phase1 = 1;
-	phase2 = 1;
-	phase3 = 1;
+	// Your phase must be same as your initial phase you use to encrypt your content in order to decrypt it
+	phase1 = 12;
+	phase2 = 11;
+	phase3 = 10;
 	int i = 0;
 	while (i < len) {
 			val[i] = val[i] - phase1 - phase2 - phase3;
+			// if value become negative then convert to positive number in order to output to a file
+			// This prevent the program from going into hang mode when can't decrypt
+			if (val[i] < 0) {
+				val[i] = abs(val[i]);
+			}
 			add();
 			i++;
 		}
@@ -412,5 +418,50 @@ void decipher2ascii(int *val, int len)
 			val[i] = ' ';
 			i++;
 		}
+		else if (val[i] == 90) {
+			val[i] = '/';
+			i++;
+		}
+		else if (val[i] == 91) {
+			val[i] = '\?';
+			i++;
+		}
+		else if (val[i] == 92) {
+			val[i] = '\a';
+			i++;
+		}
+		else if (val[i] == 93) {
+			val[i] = '\b';
+			i++;
+		}
+		else if (val[i] == 94) {
+			val[i] = '\e';
+			i++;
+		}
+		else if (val[i] == 95) {
+			val[i] = '\f';
+			i++;
+		}
+		else if (val[i] == 96){
+			val[i] = '\n';
+			i++;
+		}
+		else if (val[i] == 97){ 
+			val[i] = '\r';
+			i++;
+		}
+		else if (val[i] == 98) {
+			val[i] = '\t';
+			i++;
+		}
+		else if (val[i] == 99) {
+			val[i] = '\v';
+			i++;
+		}
+		else if (val[i] == 100) {
+			val[i] = '\'';
+			i++;
+		}
+
 	}
 }
