@@ -1,16 +1,16 @@
 // Date created: 14-AUG-2021 SATURDAY
 // This source file is part of the franka3 open source project
 // Copyright (c) 2021 nicklaus yap ken yik
-// version: 0.1.1
+// version: 0.1.2
 
-#include <stdlib.h> // for abs()
+#include <stdlib.h> // for abs(), exit()
 #include "function.h"
 
 void add(void)
 {
 	phase1 = phase1 + 1;
 	//printf("phase1: %d\n", phase1); // debug only
-	if(phase1 > 26){
+	if(phase1 > 33){
 		phase2 = phase2 + 1;
 		//printf("phase2: %d\n", phase2); // debug only
 		phase1 = 1;
@@ -20,7 +20,7 @@ void add(void)
 	
 	}
 
-	if(phase2 > 26){
+	if(phase2 > 33){
 		phase3 = phase3 + 1;
 		phase2 = 1;
 	}
@@ -29,7 +29,7 @@ void add(void)
 
 	}
 
-	if(phase3 > 26){
+	if(phase3 > 33){
 		phase3 = 1;
 	}
 	else
@@ -39,12 +39,25 @@ void add(void)
  
 }
 
+void checkDecipherPhase()
+{
+	if (phase1 > 33 || phase2 > 33 || phase3 > 33) {
+		printf("%s\n", "Error: Max value for decipher phase is 33");
+		exit(EXIT_FAILURE);
+	}
+	else if (phase1 < 1 || phase2 < 1 || phase3 < 1) {
+		printf("%s\n", "Error: Minimum value for decipher phase is 1. You can use value 0 but not recommended");
+		exit(EXIT_FAILURE);
+	}
+}
+
 void decipher(int *val, int len)
 {
 	// Your phase must be same as your initial phase you use to encrypt your content in order to decrypt it
-	phase1 = 12;
-	phase2 = 11;
-	phase3 = 10;
+	phase1 = 33;
+	phase2 = 33;
+	phase3 = 32;
+	checkDecipherPhase();
 	int i = 0;
 	while (i < len) {
 			val[i] = val[i] - phase1 - phase2 - phase3;

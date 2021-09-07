@@ -1,5 +1,13 @@
 # Changelog
+All notable changes to this project will be documented in this file.
 The date is follow when it is published to github and not the date the file created
+
+## [0.1.2] - 07-SEP-2021
+### Added
+-Add check for initial phase and decipher phase
+
+### Fixed
+-Fix max value of each phase still at 26. After this fix, max value is now 33
 
 ## [0.1.1] - 06-SEP-2021
 ### Added

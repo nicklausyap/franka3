@@ -1,7 +1,7 @@
 // Date created: 14-AUG-2021 SATURDAY
 // This source file is part of the franka3 open source project
 // Copyright (c) 2021 nicklaus yap ken yik
-// version: 0.1.1
+// version: 0.1.2
 
 #include <stdio.h> // for printf(), sizeof()
 #include <string.h> // for strlen(), memset()
@@ -12,15 +12,28 @@
 
 // Change this value for your encryption. Min value is 1 and max value for each phase is 33.
 // Anything below value 1 is not recommended
-int phase1 = 12;
-int phase2 = 11;
-int phase3 = 10;
+int phase1 = 33;
+int phase2 = 33;
+int phase3 = 32;
+
+void checkInitialPhase()
+{
+	if (phase1 > 33 || phase2 > 33 || phase3 > 33) {
+		printf("%s\n", "Error: Max value for each phase is 33");
+		exit(EXIT_FAILURE);
+	}
+	else if (phase1 < 1 || phase2 < 1 || phase3 < 1) {
+		printf("%s\n", "Error: Minimum value for each phase is 1. You can use value 0 but not recommended");
+		exit(EXIT_FAILURE);
+	}
+}
 
 int main()
 {
 	welcome();
 	version();
 	copyright();
+	checkInitialPhase();
 	int i = 0;
 	int val[16384];
 	memset(val, '\0', sizeof(int) * 16384);
