@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 The date is follow when it is published to github and not the date the file created
 
+## [0.1.3] - 20-SEP-2022
+### Added
+-Introduce initial substitution gate
+-Add option
+-Support for more characters
+
+### Changed
+-Limit 16kb buffer to 2kb for file encryption in option 1
+
 ## [0.1.2] - 07-SEP-2021
 ### Added
 -Add check for initial phase and decipher phase

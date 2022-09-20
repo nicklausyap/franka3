@@ -1,7 +1,7 @@
 // Date created: 14-AUG-2021 SATURDAY
 // This source file is part of the franka3 open source project
 // Copyright (c) 2021 nicklaus yap ken yik
-// version: 0.1.2
+// version: 0.1.3
 
 #include <stdlib.h> // for abs(), exit()
 #include "function.h"
@@ -38,6 +38,523 @@ void add(void)
 	}
  
 }
+
+// this is the reversal of the initial sub gate option 1
+void reverseInitialSubGate(int *val, int len)
+{
+	int i = 0;
+	while (i < len) {
+		// if _1a then reverse to A
+		if (val[i] == 5) {
+			val[i] = 'A';
+			i++;
+		}
+		else if (val[i] == 11) {
+			val[i] = 'B';
+			i++;
+		}
+		else if (val[i] == 13) {
+			val[i] = 'C';
+			i++;
+		}
+		else if (val[i] == 6) {
+			val[i] = 'D';
+			i++;
+		}
+		else if (val[i] == 12) {
+			val[i] = 'E';
+			i++;
+		}
+		else if (val[i] == 7) {
+			val[i] = 'F';
+			i++;
+		}
+		else if (val[i] == 4) {
+			val[i] = 'G';
+			i++;
+		}
+		else if (val[i] == 17) {
+			val[i] = 'H';
+			i++;
+		}
+		else if (val[i] == 22) {
+			val[i] = 'I';
+			i++;
+		}
+		else if (val[i] == 26) {
+			val[i] = 'J';
+			i++;
+		}
+		else if (val[i] == 14) {
+			val[i] = 'K';
+			i++;
+		}
+		else if (val[i] == 20) {
+			val[i] = 'L';
+			i++;
+		}
+		else if (val[i] == 15) {
+			val[i] = 'M';
+			i++;
+		}
+		else if (val[i] == 23) {
+			val[i] ='N';
+			i++;
+		}
+		else if (val[i] == 25) {
+			val[i] = 'O';
+			i++;
+		}
+		else if (val[i] == 8) {
+			val[i] = 'P';
+			i++;
+		}
+		else if (val[i] == 24) {
+			val[i] = 'Q';
+			i++;
+		}
+		else if (val[i] == 21) {
+			val[i] = 'R';
+			i++;
+		}
+		else if (val[i] == 19) {
+			val[i] = 'S';
+			i++;
+		}
+		else if (val[i] == 16) {
+			val[i] = 'T';
+			i++;
+		}
+		else if (val[i] == 1) {
+			val[i] = 'U';
+			i++;
+		}
+		else if (val[i] == 9) {
+			val[i] = 'V';
+			i++;
+		}
+		else if (val[i] == 2) {
+			val[i] = 'W';
+			i++;
+		}
+		else if (val[i] == 18) {
+			val[i] = 'X';
+			i++;
+		}
+		else if (val[i] == 3) {
+			val[i] = 'Y';
+			i++;
+		}
+		else if (val[i] == 10) {
+			val[i] = 'Z';
+			i++;
+		}
+		else if (val[i] == 32) {
+			val[i] = 'a';
+			i++;
+		}
+		else if (val[i] == 38) {
+			val[i] = 'b';
+			i++;
+		}
+		else if (val[i] == 40) {
+			val[i] = 'c';
+			i++;
+		}
+		else if (val[i] == 33) {
+			val[i] = 'd';
+			i++;
+		}
+		else if (val[i] == 39) {
+			val[i] = 'e';
+			i++;
+		}
+		else if (val[i] == 41) {
+			val[i] = 'f';
+			i++;
+		}
+		else if (val[i] == 44) {
+			val[i] = 'g';
+			i++;
+		}
+		else if (val[i] == 49) {
+			val[i] = 'h';
+			i++;
+		}
+		else if (val[i] == 53) {
+			val[i] = 'i';
+			i++;
+		}
+		else if (val[i] == 41) {
+			val[i] = 'j';
+			i++;
+		}
+		else if (val[i] == 47) {
+			val[i] = 'k';
+			i++;
+		}
+		else if (val[i] == 42) {
+			val[i] =  'l';
+			i++;
+		}
+		else if (val[i] == 50) {
+			val[i] =  'm';
+			i++;
+		}
+		else if (val[i] == 52) {
+			val[i] = 'n';
+			i++;
+		}
+		else if (val[i] == 35) {
+			val[i] = 'o';
+			i++;
+		}
+		else if (val[i] == 51) {
+			val[i] = 'p';
+			i++;
+		}
+		else if (val[i] == 48) {
+			val[i] = 'q';
+			i++;
+		}
+		else if (val[i] == 46) {
+			val[i] = 'r';
+			i++;
+		}
+		else if (val[i] == 43) {
+			val[i] = 's';
+			i++;
+		}
+		else if (val[i] == 28) {
+			val[i] = 't';
+			i++;
+		}
+		else if (val[i] == 36) {
+			val[i] = 'u';
+			i++;
+		}
+		else if (val[i] == 29) {
+			val[i] = 'v';
+			i++;
+		}
+		else if (val[i] == 45) {
+			val[i] = 'w';
+			i++;
+		}
+		else if (val[i] == 30) {
+			val[i] = 'x';
+			i++;
+		}
+		else if (val[i] == 37) {
+			val[i] = 'y';
+			i++;
+		}
+		else if (val[i] == 59) {
+			val[i] = 'z';
+			i++;
+		}
+		else if (val[i] == 65) {
+			val[i] = '0';
+			i++;
+		}
+		else if (val[i] == 67) {
+			val[i] = '1';
+			i++;
+		}
+		else if (val[i] == 60) {
+			val[i] = '2';
+			i++;
+		}
+		else if (val[i] == 66) {
+			val[i] = '3';
+			i++;
+		}
+		else if (val[i] == 58) {
+			val[i] = '4';
+			i++;
+		}
+		else if (val[i] == 71) {
+			val[i] = '5';
+			i++;
+		}
+		else if (val[i] == 76) {
+			val[i] = '6';
+			i++;
+		}
+		else if (val[i] == 80) {
+			val[i] = '7';
+			i++;
+		}
+		else if (val[i] == 68) {
+			val[i] = '8';
+			i++;
+		}
+		else if (val[i] == 74) {
+			val[i] = '9';
+			i++;
+		}
+		else if (val[i] == 69) {
+			val[i] = '!';
+			i++;
+		}
+		else if (val[i] == 77) {
+			val[i] = '@';
+			i++;
+		}
+		else if (val[i] == 79) {
+			val[i] = '#';
+			i++;
+		}
+		else if (val[i] == 62) {
+			val[i] = '$';
+			i++;
+		}
+		else if (val[i] == 78) {
+			val[i] = '%';
+			i++;
+		}
+		else if (val[i] == 75) {
+			val[i] = '^';
+			i++;
+		}
+		else if (val[i] == 73) {
+			val[i] = '&';
+			i++;
+		}
+		else if (val[i] == 70) {
+			val[i] = '*';
+			i++;
+		}
+		else if (val[i] == 55) {
+			val[i] = '(';
+			i++;
+		}
+		else if (val[i] == 63) {
+			val[i] = ')';
+			i++;
+		}
+		else if (val[i] == 56) {
+			val[i] = '_';
+			i++;
+		}
+		else if (val[i] == 72) {
+			val[i] = '-';
+			i++;
+		}
+		else if (val[i] == 57) {
+			val[i] = '+';
+			i++;
+		}
+		else if (val[i] == 64) {
+			val[i] = '=';
+			i++;
+		}
+		else if (val[i] == 86) {
+			val[i] = '[';
+			i++;
+		}
+		else if (val[i] == 92) {
+			val[i] = '{';
+			i++;
+		}
+		else if (val[i] == 94) {
+			val[i] = ']';
+			i++;
+		}
+		else if (val[i] == 87) {
+			val[i] = '}';
+			i++;
+		}
+		else if (val[i] == 93) {
+			val[i] = 96;
+			i++;
+		}
+		else if (val[i] == 85) {
+			val[i] = 34;
+			i++;
+		}
+		else if (val[i] == 98) {
+			val[i] = 92;
+			i++;
+		}
+		else if (val[i] == 103) {
+			val[i] = '|';
+			i++;
+		}
+		else if (val[i] == 107) {
+			val[i] = '.';
+			i++;
+		}
+		else if (val[i] == 95) {
+			val[i] = '>';
+			i++;
+		}
+		else if (val[i] == 101) {
+			val[i] = '<';
+			i++;
+		}
+		else if (val[i] == 96) {
+			val[i] = ',';
+			i++;
+		}
+		else if (val[i] == 104) {
+			val[i] = ' ';
+			i++;
+		}
+		else if (val[i] == 106) {
+			val[i] = '/';
+			i++;
+		}
+		else if (val[i] == 89) {
+			val[i] = '\?';
+			i++;
+		}
+		else if (val[i] == 105) {
+			val[i] = '\a';
+			i++;
+		}
+		else if (val[i] == 102) {
+			val[i] = '\b';
+			i++;
+		}
+		else if (val[i] == 100) {
+		// escape character maybe not be supported if used as \e. the ascii is 27 and hex is 1B
+			val[i] = 27;
+			i++;
+		}
+		else if (val[i] == 97) {
+			val[i] = '\f';
+			i++;
+		}
+		else if (val[i] == 82){
+			val[i] = '\n';
+			i++;
+		}
+		else if (val[i] == 90){ 
+			val[i] = '\r';
+			i++;
+		}
+		else if (val[i] == 83) {
+			val[i] = '\t';
+			i++;
+		}
+		else if (val[i] == 99) {
+			val[i] = '\v';
+			i++;
+		}
+		else if (val[i] == 84) {
+			val[i] = '\'';
+			i++;
+		}
+		else{
+			printf("%d, ", val[i]);
+			i++;
+		}
+		/* not used yet
+		else if (val[i] == 101) {
+			val[i] = 5;
+			i++;
+		}
+		else if (val[i] == 102) {
+			val[i] = 6;
+			i++;
+		}
+		else if (val[i] == 103) {
+			val[i] = 4;
+			i++;
+		}
+		else if (val[i] == 104) {
+			val[i] = 17;
+			i++;
+		}
+		else if (val[i] == 105) {
+			val[i] = 22;
+			i++;
+		}
+		else if (val[i] == 106) {
+			val[i] = 26;
+			i++;
+		}
+		else if (val[i] == 107) {
+			val[i] = 14;
+			i++;
+		}
+		else if (val[i] == 108) {
+			val[i] = 20;
+			i++;
+		}
+		else if (val[i] == 109) {
+			val[i] = 15;
+			i++;
+		}
+		else if (val[i] == 110) {
+			val[i] = 23;
+			i++;
+		}
+		else if (val[i] == 111) {
+			val[i] = 25;
+			i++;
+		}
+		else if (val[i] == 112) {
+			val[i] = 24;
+			i++;
+		}
+		else if (val[i] == 113) {
+			val[i] = 21;
+			i++;
+		}
+		else if (val[i] == 114) {
+			val[i] = 19;
+			i++;
+		}
+		else if (val[i] == 115) {
+			val[i] = 16;
+			i++;
+		}
+		else if (val[i] == 116) {
+			val[i] = 1;
+			i++;
+		}
+		else if (val[i] == 117) {
+			val[i] = 2;
+			i++;
+		}
+		else if (val[i] == 118) {
+			val[i] = 18;
+			i++;
+		}
+		else if (val[i] == 119) {
+			val[i] = 3;
+			i++;
+		}
+		else if (val[i] == 120) {
+			val[i] = 28;
+			i++;
+		}
+		else if (val[i] == 121) {
+			val[i] = 29;
+			i++;
+		}
+		else if (val[i] == 122) {
+			val[i] = 30;
+			i++;
+		}
+		else if (val[i] == 123) {
+			val[i] = 59;
+			i++;
+		}
+		else if (val[i] == 124) {
+			val[i] = 58;
+			i++;
+		}
+		else if (val[i] == 125) {
+			val[i] = 64;
+			i++;
+		}
+		*/
+	}
+}
+
 
 void checkDecipherPhase()
 {
@@ -473,6 +990,106 @@ void decipher2ascii(int *val, int len)
 		}
 		else if (val[i] == 100) {
 			val[i] = '\'';
+			i++;
+		}
+		else if (val[i] == 101) {
+			val[i] = 5;
+			i++;
+		}
+		else if (val[i] == 102) {
+			val[i] = 6;
+			i++;
+		}
+		else if (val[i] == 103) {
+			val[i] = 4;
+			i++;
+		}
+		else if (val[i] == 104) {
+			val[i] = 17;
+			i++;
+		}
+		else if (val[i] == 105) {
+			val[i] = 22;
+			i++;
+		}
+		else if (val[i] == 106) {
+			val[i] = 26;
+			i++;
+		}
+		else if (val[i] == 107) {
+			val[i] = 14;
+			i++;
+		}
+		else if (val[i] == 108) {
+			val[i] = 20;
+			i++;
+		}
+		else if (val[i] == 109) {
+			val[i] = 15;
+			i++;
+		}
+		else if (val[i] == 110) {
+			val[i] = 23;
+			i++;
+		}
+		else if (val[i] == 111) {
+			val[i] = 25;
+			i++;
+		}
+		else if (val[i] == 112) {
+			val[i] = 24;
+			i++;
+		}
+		else if (val[i] == 113) {
+			val[i] = 21;
+			i++;
+		}
+		else if (val[i] == 114) {
+			val[i] = 19;
+			i++;
+		}
+		else if (val[i] == 115) {
+			val[i] = 16;
+			i++;
+		}
+		else if (val[i] == 116) {
+			val[i] = 1;
+			i++;
+		}
+		else if (val[i] == 117) {
+			val[i] = 2;
+			i++;
+		}
+		else if (val[i] == 118) {
+			val[i] = 18;
+			i++;
+		}
+		else if (val[i] == 119) {
+			val[i] = 3;
+			i++;
+		}
+		else if (val[i] == 120) {
+			val[i] = 28;
+			i++;
+		}
+		else if (val[i] == 121) {
+			val[i] = 29;
+			i++;
+		}
+		else if (val[i] == 122) {
+			val[i] = 30;
+			i++;
+		}
+		else if (val[i] == 123) {
+			val[i] = ';';
+			i++;
+		}
+		else if (val[i] == 124) {
+			val[i] = ':';
+			i++;
+		}
+		else if (val[i] == 125) {
+			val[i] = 64;
 			i++;
 		}
 
